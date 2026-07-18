@@ -1,16 +1,80 @@
-# React + Vite
+# 🏏 BPL Players Auction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mini fantasy-cricket auction simulator built with React, where users get a virtual purse and "bid" on players for their dream BPL (Bangladesh Premier League) squad.
 
-Currently, two official plugins are available:
+**🔗 Live Demo:** [bpl-players-auction.netlify.app](https://bpl-players-auction.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📖 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+BPL Players Auction lets a user start with a fixed virtual budget (5,000,000 coins) and pick players from an available pool. Each player has a price, country, role, batting style, and rating — pick wisely, because once your coins run out, you can't buy more! Switch between **Available Players** and **Selected Players** tabs to track your squad in real time.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 💰 Real-time coin balance tracking as players are bought
+- 🧑‍🤝‍🧑 Browse all available players with stats (role, rating, batting style, price)
+- ✅ Toast notifications on successful purchase / insufficient balance
+- 🔄 Toggle between "Available" and "Selected" player views
+- 📱 Fully responsive grid layout (1 / 2 / 3 columns based on screen size)
+- ⚡ Built with React 19 `use()` hook + `Suspense` for async data fetching
+
+## 🛠️ Tech Stack
+
+| Category | Tech |
+|---|---|
+| Framework | React 19 + Vite |
+| Styling | Tailwind CSS 4 + DaisyUI |
+| Icons | Lucide React, FontAwesome |
+| Notifications | react-toastify |
+| Deployment | Netlify |
+
+## 📂 Project Structure
+
+```
+bpl/
+├── public/
+│   └── data.json        # Player dataset
+├── src/
+│   ├── component/
+│   │   ├── Navbar.jsx
+│   │   ├── Banner.jsx
+│   │   ├── Players.jsx
+│   │   ├── Player.jsx
+│   │   ├── Selected.jsx
+│   │   └── SelectedPlayer.jsx
+│   ├── App.jsx
+│   └── main.jsx
+└── package.json
+```
+
+## 🚀 Getting Started
+
+\`\`\`bash
+# Clone the repo
+git clone https://github.com/turkyfarhad999/bpl.git
+cd bpl
+
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
+\`\`\`
+
+## 🔮 Future Improvements
+
+- Persist selected team with localStorage / backend
+- Player search & filter by role/country
+- Auction countdown timer / live bidding style UX
+- Team budget analytics dashboard
+
+## 👤 Author
+
+**Turky Farhad**
+CSE, RUET | MERN Stack Developer
+[GitHub](https://github.com/turkyfarhad999)
+
+---
+
+⭐ If you liked this project, consider giving it a star!
